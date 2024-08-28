@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.home{
+  @apply text-3xl font-bold
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.events{
+  @apply  flex flex-wrap gap-9 w-[80%] mx-auto justify-around mb-[100px] font-bold
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero{
+  @apply w-full h-[450px] mb-[150px] bg-white
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cardContainer{
+  @apply w-[300px]
 }
 
-.App-link {
-  color: #61dafb;
+.layout-children-container{
+  @apply w-full 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar{
+  @apply w-full h-[100px] mb-5 
+}
+
+.navbar-subcontainer{
+  @apply  w-[95%] mx-auto h-[100%] flex justify-between items-center 
+}
+
+.eventPage{
+  @apply  w-[80%] mx-auto bg-white
+}
+.eventPage-details{
+  @apply flex justify-between gap-5 w-[500px]
+}
+.eventPage-details-key{
+  @apply text-xl text-gray-500 font-medium leading-loose
+}
+.eventPage-details-value{
+  @apply text-lg font-medium leading-loose 
 }
