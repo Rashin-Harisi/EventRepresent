@@ -10,14 +10,7 @@ import { Link } from 'react-router-dom'
 const Events = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [events, setEvents] = useState<EventsProps[]>([])
-    //console.log("events", events);
 
-/*    useEffect(() => {
-        setIsLoading(true)
-        setEvents(eventData)
-        setIsLoading(false)
-    }, [])
-*/
      useEffect(() => {
          const fetchData = async () => {
              setIsLoading(true)

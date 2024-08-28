@@ -11,9 +11,9 @@ const EventPage = () => {
   const [event, setEvent] = useState<any>([])
   const [price, setPrice] = useState(0)
   const [enrollClick, setEnrollClick] = useState(false);
-  
 
-  
+
+
 
 
   useEffect(() => {
@@ -41,11 +41,14 @@ const EventPage = () => {
       {isLoading && "Loading ..."}
       {event && (
         <>
-          <p className='text-center text-2xl font-semibold mt-[50px]'>{event.title}</p>
-          <div className='w-[70%] px-5 py-8 my-8 flex justify-between gap-5 mb-[50px]'>
-            <img src={`/${event.imageUrl}`} alt='' height={500} width={500} />
-            <div className='flex flex-col justify-between'>
-              <div>
+          <p className='text-center text-lg sm:text-xl lg:text-2xl font-semibold mt-[50px]'>{event.title}</p>
+          <div className='w-[95%] mx-auto my-8 flex flex-col lg:flex-row justify-between gap-2 mb-[50px]'>
+            <div className='w-full flex justify-center'>
+              <img src={`/${event.imageUrl}`} alt=''  className='object-contain'/>
+            </div>
+
+            <div className='w-full flex flex-col grow justify-between gap-2'>
+              <div className='flex flex-col gap-6'>
                 <div className='eventPage-details'>
                   <p className='eventPage-details-key'>Organizer </p>
                   <p className='eventPage-details-value'>{event.organizer}</p>
@@ -76,9 +79,9 @@ const EventPage = () => {
             </div>
           </div>
         </>)}
-        <EmailValidation isOpen={enrollClick} 
-          id={id}
-          closeModule={()=>setEnrollClick(false)} />
+      <EmailValidation isOpen={enrollClick}
+        id={id}
+        closeModule={() => setEnrollClick(false)} />
     </div>
 
   )

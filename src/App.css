@@ -1,11 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.home{
-  @apply text-3xl font-bold
-}
 
 .events{
   @apply  flex flex-wrap gap-9 w-[80%] mx-auto justify-around mb-[100px] font-bold
@@ -32,14 +29,14 @@
 }
 
 .eventPage{
-  @apply  w-[80%] mx-auto bg-white
+  @apply  w-[85%] mx-auto bg-white overflow-x-hidden
 }
 .eventPage-details{
-  @apply flex justify-between gap-5 w-[500px]
+  @apply flex flex-col sm:flex-row
 }
 .eventPage-details-key{
-  @apply text-xl text-gray-500 font-medium leading-loose
+  @apply text-base sm:text-lg  text-gray-700 font-medium leading-loose sm:w-[30%] break-words
 }
 .eventPage-details-value{
-  @apply text-lg font-medium leading-loose 
+  @apply text-base  sm:text-lg grow font-medium leading-loose sm:w-[60%] break-words pl-11
 }

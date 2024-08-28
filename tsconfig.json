@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "types/index.d.ts" ]
+, "types/index.d.ts", "src/components/ui" ]
 }

@@ -47,7 +47,10 @@ const EmailValidation = ({ isOpen, closeModule,id}: {
         }
         if (otpCode === +userOtp){
             console.log("verified");
-            navigate("/userInfo",{state: id})
+            navigate("/userInfo",{state: {
+                param1 : id,
+                param2 : email,
+            }})
         }
     }
     return (
